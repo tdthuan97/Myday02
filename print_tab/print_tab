@@ -1,0 +1,30 @@
+Your mission
+Write a function that takes an array of arrays of words as a parameter. The function will print this array in two dimensions and in an orderly fashion: each column will be as wide as its longest member.
+
+Your function must be named print_tab and in a file named print_tab.py.
+
+def print_tab(array):
+  """Given one argument, this function returns nothing.
+
+  >>> print_tab([["this"], ["~~", "is", "~~"], [ "ah!", "oh!", "kind", "", "eh !"], ["1", "2", "3", "of"], ["...", "...", "...", "...", "fun !"]])
+  +++++++++++++++++++++++++++++++++++
+  + this                            +
+  +++++++++++++++++++++++++++++++++++
+  + ~~   + is  + ~~                 +
+  +++++++++++++++++++++++++++++++++++
+  + ah!  + oh! + kind +     + eh !  +
+  +++++++++++++++++++++++++++++++++++
+  + 1    + 2   + 3    + of          +
+  +++++++++++++++++++++++++++++++++++
+  + ...  + ... + ...  + ... + fun ! +
+  +++++++++++++++++++++++++++++++++++
+  >>> print_tab([])
+  ++
+  ++
+  >>> print_tab([[""]])
+  ++++
+  +  +
+  ++++
+  """
+
+

@@ -1,0 +1,46 @@
+Your mission
+Your mission is to write a mini sed. 
+
+The parameters will always be well formatted, and we won't test undefined behaviors such as 'y/ooo/abc/' or 'y/abc/bcd/'.
+
+Your function must be named sed and in a file named sed.py.
+
+Signature
+
+def sed(command, s):
+    """Apply a sed command to a string.
+
+    Two commands are supported:
+        - s/pattern/replacement/g
+        - y/string1/string2/
+
+    This sed is a simple version: in our case, `pattern` is a string, not a
+    regular expression.
+
+    -----
+
+    The first command replaces `pattern` with `replacement`. Any character
+    other than `\` or `\n` can replace `/`.
+
+        >>> sed('s/morning/evening/g', 'Good morning')
+        'Good evening'
+        >>> sed('s👍morning👍evening👍g', 'Good morning')
+        'Good evening'
+        >>> sed('s/afternoon/evening/g', 'Good afternoon.\\nWhat an afternoon')
+        'Good evening.\\nWhat an evening'
+
+    Be careful, sed is applied line by line, so `hello\nworld` is not a good
+    pattern.
+
+    -----
+
+    The second command replaces all characters from `string1` with characters
+    from `string2`. This means that len(string1) == len(string2).
+
+    Any character other than `\` or `\n` can replace `/`.
+
+        >>> sed('y/aeo/430/', 'hello mr wayne')
+        'h3ll0 mr w4yn3'
+    """
+
+
